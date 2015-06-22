@@ -1,0 +1,57 @@
+Various notes about things we did to convert this from JIF to VA
+
+All of this turns (mostly) into the JIFHack.java - which produces JIF Hack.jbin - which is loaded into this initial DB.
+
+
+1) VA Refsets
+	- Add via NewConcepts.txt from scratch using any UUIDs
+	***CAN BE, but may not buy us anything
+	
+
+
+	
+2) VA Allergen Refsets
+	- Req:
+		- All four components must be released (therefore must be on Rel Cand Path)
+		- Rf2 file has refernce to UUID: c439b4b1-ce66-4fa8-bad4-213d56651a81
+		
+	- Change NewConcepts.txt to state VA Reactants (refset) & VA Refsets as parent
+		JIF Reactants (refset)	JIF Reactants	08927a39-5c91-51b0-80bf-42bf0fc9ae46	${projectDevelopmentPathFsn}	TRUE		c439b4b1-ce66-4fa8-bad4-213d56651a81
+		VA Allergens (refset)	VA Allergens	08927a39-5c91-51b0-80bf-42bf0fc9ae46	${projectDevelopmentPathFsn}	TRUE		c439b4b1-ce66-4fa8-bad4-213d56651a81
+
+		***Assume that RF2 will handle mulitiple UUIDs in creation of SCTIDs.  
+			Must review RF2 files to ensure refset member's point to Refset Concept that is defined in RF2 COn/Desc/Rel with same SCTIDs
+		   ... If doesn't work, try above approach of replacing NewConcepts.txt reference to concept (albeit with mainaining existing UUID breaking Type5 UUID generation requirement)
+			... Type 5 issue may or may not break process
+				... if breaks, need to revisit
+			... If this breaks as well, hard-code access to proper uuid in release process to avoid issue
+			
+			
+	
+3) VA Module ID
+	- Change pom.xml to state VA maintained module (and preferred term as well)
+		<projectModuleFsn>JIF maintained module (core metadata concept)</projectModuleFsn>
+		*** May be able to change FSN and not UUID
+		... BUT SHOULD be able to simply add additional UUID (ie merge concept)
+
+
+.... Then move all components of these ***THREE*** concepts to the Rel Cand Path
+
+
+
+
+4) Food Concept
+	- Add 2nd UUID to Food (substance) concept
+	- Remove original Food (CHDR Metadata concept) from NewConcepts.txt
+			Food (CHDR metadata)	Food	57b7271f-8bd2-47ac-b515-dd4eb2c49c70	${projectDevelopmentPathFsn}	FALSE		06c17145-5480-4260-9696-fc4d7f259b73
+	
+		*** Must review RF2 files to ensure refset member's point to reactantId Concept that is defined is the Food (substance) SctId
+
+	
+	
+... Shouldn't have to re-export Food Concept (ie put on Rel Cand path) b/c we are not making change, just changing members' reactantsId SctId to point totthis instead
+	
+	
+	
+A) What is the naming convention for JIF Reactants refset... we created these methods
+B) Addional UUIDs don't matter in RF2 or USCRS

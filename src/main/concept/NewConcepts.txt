@@ -1,0 +1,20 @@
+fsn	prefTerm	parent(uuid)	path	annotation(true/false)	author(blank or uuid)	uuid to assign to new concept(leave blank unless concept already exists with id)
+${projectModuleFsn}	${projectModulePrefName}	40d1c869-b509-32f8-b735-836eac577a67	${projectDevelopmentPathFsn}	FALSE		${projectModuleUUID}
+${projectDevelopmentPathFsn}	${projectDevelopmentPathPrefName}	e89c2b90-c85a-3dfb-978e-8df49046592b	${projectDevelopmentPathFsn}	FALSE		${projectDevelopmentPathUUID}
+${projectDevelopmentOriginFsn}	${projectDevelopmentOriginPrefName}	e89c2b90-c85a-3dfb-978e-8df49046592b	${projectDevelopmentPathFsn}	FALSE		${projectDevelopmentOriginUUID}
+${projectReleaseCandidatePathFsn}	${projectReleaseCandidatePathPrefName}	e89c2b90-c85a-3dfb-978e-8df49046592b	${projectDevelopmentPathFsn}	FALSE		${projectReleaseCandidatePathUUID}
+Joint Incentive Funds role 	Joint Incentive Funds role	b646801a-7adc-3e9c-845f-1b6d3c041514	${projectDevelopmentPathFsn}	FALSE		f6561a78-a48f-594f-89df-5f77a215d807
+Joint Incentive Funds approver	JIF approver	f6561a78-a48f-594f-89df-5f77a215d807	${projectDevelopmentPathFsn}	FALSE		7a8c8a56-6815-5abf-8d72-47b5122399f6
+Joint Incentive Funds editor 	JIF editor	f6561a78-a48f-594f-89df-5f77a215d807	${projectDevelopmentPathFsn}	FALSE		3585308c-3897-5709-91d9-1356617091ea
+Joint Incentive Funds reviewer 	JIF reviewer	f6561a78-a48f-594f-89df-5f77a215d807	${projectDevelopmentPathFsn}	FALSE		caeb77e2-abd4-5311-8ee0-c743694bd285
+Joint Incentive Funds status 	Joint Incentive Funds status	d944af55-86d9-33f4-bebd-a10bf3f4712c	${projectDevelopmentPathFsn}	FALSE		4af7ffa0-dadd-541b-bdb3-25cda4f89810
+Joint Incentive Funds for approval workflow status	JIF for approval	4af7ffa0-dadd-541b-bdb3-25cda4f89810	${projectDevelopmentPathFsn}	FALSE		c7624995-be92-564a-905f-d42691e0584b
+Joint Incentive Funds item assigned workflow status	JIF item assigned	4af7ffa0-dadd-541b-bdb3-25cda4f89810	${projectDevelopmentPathFsn}	FALSE		2cd075aa-fa92-5aa5-9f3d-d68c1c241d42
+Joint Incentive Funds approved for publication workflow status	JIF approved for publication	4af7ffa0-dadd-541b-bdb3-25cda4f89810	${projectDevelopmentPathFsn}	FALSE		b59420f6-c6a1-5bab-a379-45f0642044c4
+Joint Incentive Funds for review workflow status	JIF for review	4af7ffa0-dadd-541b-bdb3-25cda4f89810	${projectDevelopmentPathFsn}	FALSE		b7bce84b-4596-5df4-9615-934232582479
+Project Refsets	Project Refsets	3e0cd740-2cc6-3d68-ace7-bad2eb2621da	${projectDevelopmentPathFsn}	FALSE		7fe3e31f-a969-53ff-8702-f7837e4a03d9
+SNOMED CT Refsets	SNOMED CT Refsets	7fe3e31f-a969-53ff-8702-f7837e4a03d9	${projectDevelopmentPathFsn}	FALSE		4b6b3b33-2fe2-506a-9f6a-7c7318b02fa9
+Organization (CHDR metadata)	Organization	01a081e7-0bec-5bbd-973a-53da06096ed1	${projectDevelopmentPathFsn}	FALSE		929e1267-afd1-4e5f-983d-e2286f807ebb
+Department of Defense (CHDR metadata)	DoD	929e1267-afd1-4e5f-983d-e2286f807ebb	${projectDevelopmentPathFsn}	FALSE		769f447c-ff33-4e43-b123-4eade99331bd
+Department of Defense/Veterans Administration (CHDR metadata)	DoD/VA	929e1267-afd1-4e5f-983d-e2286f807ebb	${projectDevelopmentPathFsn}	FALSE		6c73195a-5041-45b9-9003-c055d59c7df1
+Veterans Administration (CHDR metadata)	VA	929e1267-afd1-4e5f-983d-e2286f807ebb	${projectDevelopmentPathFsn}	FALSE		798007ac-c8c8-488d-8761-e7357836f1f5
