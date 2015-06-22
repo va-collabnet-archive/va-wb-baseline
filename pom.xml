@@ -120,7 +120,7 @@
 								<artifactItem>
 									<groupId>org.ihtsdo.sct.baseline</groupId>
 									<artifactId>sct-econcept</artifactId>
-									<version>2014.01.31-build-8</version>  <!-- This is actually 2014.07, they used the wrong version # -->
+									<version>2015.07.31-build-2</version>  <!-- This is actually 2014.07, they used the wrong version # -->
 									<classifier>latest</classifier>
 									<type>zip</type>
 								</artifactItem>
