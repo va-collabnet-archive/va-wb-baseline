@@ -14,11 +14,11 @@
 	<name>VA Terminology Workbench :: Baseline</name>
 	<description>VA Terminology Workbench :: development baseline :: database</description>
 
-	<scm>
+	<!--scm>
 		<connection>scm:svn:https://csfe.aceworkspace.net/svn/repos/va-jif-wb-bundle/va-jif-wb-baseline/trunk</connection>
 		<developerConnection>scm:svn:https://csfe.aceworkspace.net/svn/repos/va-jif-wb-bundle/va-jif-wb-baseline/trunk</developerConnection>
 		<url>https://csfe.aceworkspace.net/integration/viewvc/viewvc.cgi/va-jif-wb-baseline/trunk/?root=va-jif-wb-bundle&amp;system=exsy1002</url>
-	</scm>
+	</scm-->
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -120,7 +120,7 @@
 								<artifactItem>
 									<groupId>org.ihtsdo.sct.baseline</groupId>
 									<artifactId>sct-econcept</artifactId>
-									<version>2015.07.31-build-2</version>  <!-- This is actually 2014.07, they used the wrong version # -->
+									<version>2015.07.31-build-2</version>
 									<classifier>latest</classifier>
 									<type>zip</type>
 								</artifactItem>
