@@ -61,8 +61,40 @@
 			</plugins>
 		</pluginManagement>
 		<plugins>
-			<!-- Switch back to truezip, as maven corrupts zip files larger than ~4 GB  -->
 			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<version>2.5.5</version>
+                <!-- These dependencies get us multi-threaded zip - which is _way_ faster -->
+                <dependencies>  
+                    <dependency>
+                        <groupId>org.codehaus.plexus</groupId>
+                        <artifactId>plexus-archiver</artifactId>
+                        <version>2.10.3</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>org.codehaus.plexus</groupId>
+                        <artifactId>plexus-io</artifactId>
+                        <version>2.6</version>
+                    </dependency>
+                </dependencies>
+				<executions>
+					<execution>
+						<id>attach-db</id>
+						<configuration>
+							<descriptors>
+								<descriptor>src/main/assembly/db.xml</descriptor>
+							</descriptors>
+						</configuration>
+						<goals>
+							<goal>single</goal>
+						</goals>
+						<phase>package</phase>
+					</execution>
+				</executions>
+			</plugin>
+			<!-- Switch back to truezip, as maven corrupts zip files larger than ~4 GB  -->
+			<!--plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>truezip-maven-plugin</artifactId>
 				<version>1.2</version>
@@ -104,7 +136,7 @@
 						</configuration>
 					</execution>
 				</executions>
-			</plugin>
+			</plugin-->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-dependency-plugin</artifactId>
@@ -120,7 +152,7 @@
 								<artifactItem>
 									<groupId>org.ihtsdo.sct.baseline</groupId>
 									<artifactId>sct-econcept</artifactId>
-									<version>2015.07.31-build-2</version>
+									<version>2015.01.31-build-7</version>
 									<classifier>latest</classifier>
 									<type>zip</type>
 								</artifactItem>
@@ -139,7 +171,25 @@
 								<artifactItem>
 									<groupId>gov.va.oia.terminology.converters</groupId>
 									<artifactId>us-extension-econcept</artifactId>
-									<version>20140901-loader-1.1</version>
+									<version>20150301-loader-1.2-SNAPSHOT</version>
+									<type>zip</type>
+								</artifactItem>
+							</artifactItems>
+							<outputDirectory>${project.build.directory}/db</outputDirectory>
+						</configuration>
+					</execution>
+					<execution>
+						<id>extract-spanish-extension</id>
+						<phase>generate-sources</phase>
+						<goals>
+							<goal>unpack</goal>
+						</goals>
+						<configuration>
+							<artifactItems>
+								<artifactItem>
+									<groupId>gov.va.oia.terminology.converters</groupId>
+									<artifactId>spanish-extension-econcept</artifactId>
+									<version>20150430-loader-1.2-SNAPSHOT</version>
 									<type>zip</type>
 								</artifactItem>
 							</artifactItems>
@@ -163,7 +213,7 @@
 							</artifactItems>
 							<outputDirectory>${project.build.directory}/db</outputDirectory>
 						</configuration>
-					</execution-->
+					</execution>
 					<execution>
 						<id>fetch-ndfrt-data</id>
 						<phase>generate-sources</phase>
@@ -181,7 +231,7 @@
 							</artifactItems>
 							<outputDirectory>${project.build.directory}/db</outputDirectory>
 						</configuration>
-					</execution>
+					</execution-->
 					<execution>
 						<id>fetch-loinc-data</id>
 						<phase>generate-sources</phase>
@@ -193,8 +243,8 @@
 								<artifactItem>
 									<groupId>gov.va.oia.terminology.converters</groupId>
 									<artifactId>loinc-econcept</artifactId>
-									<version>2.48-loader-2.9</version>
-									<type>zip</type>
+									<version>2.52-loader-3.0-SNAPSHOT</version>
+									<type>jbin.zip</type>
 								</artifactItem>
 							</artifactItems>
 							<outputDirectory>${project.build.directory}/db</outputDirectory>
@@ -211,14 +261,14 @@
 								<artifactItem>
 									<groupId>gov.va.oia.terminology.converters</groupId>
 									<artifactId>vhat-econcept</artifactId>
-									<version>2014.06.02-loader-2.5</version>
+									<version>2015.06.22-loader-3.0-SNAPSHOT</version>
 									<type>zip</type>
 								</artifactItem>
 							</artifactItems>
 							<outputDirectory>${project.build.directory}/db</outputDirectory>
 						</configuration>
 					</execution>
-					<execution>
+					<!--execution>
 						<id>fetch-CHDR-data</id>
 						<phase>generate-sources</phase>
 						<goals>
@@ -253,7 +303,7 @@
 							</artifactItems>
 							<outputDirectory>${project.build.directory}/db</outputDirectory>
 						</configuration>
-					</execution>
+					</execution-->
 					<execution>
 						<id>fetch-ndf-data</id>
 						<phase>generate-sources</phase>
@@ -265,14 +315,14 @@
 								<artifactItem>
 									<groupId>gov.va.oia.terminology.converters</groupId>
 									<artifactId>ndf-econcept</artifactId>
-									<version>2014-04-24-loader-1.6.1</version>
+									<version>2015-05-fixed-loader-2.0-SNAPSHOT</version>
 									<type>zip</type>
 								</artifactItem>
 							</artifactItems>
 							<outputDirectory>${project.build.directory}/db</outputDirectory>
 						</configuration>
 					</execution>
-					<execution>
+					<!--execution>
 						<id>fetch-RxNorm-data</id>
 						<phase>generate-sources</phase>
 						<goals>
@@ -325,7 +375,7 @@
 							</artifactItems>
 							<outputDirectory>${project.build.directory}/db</outputDirectory>
 						</configuration>
-					</execution>
+					</execution-->
 				</executions>
 			</plugin>
 			<plugin>
@@ -367,16 +417,17 @@
 								<String>eConcepts.jbin</String> <!-- snomed -->
 								<String>../../JIF Hack.jbin</String>
 								<String>sct-us-extension.jbin</String>
+								<String>sct-spanish-extension.jbin</String>
 								<!--String>medicalDevices.jbin</String-->
-								<String>ndfrtEConcepts.jbin</String>
+								<!--String>ndfrtEConcepts.jbin</String-->
 								<String>loincEConcepts.jbin</String>
 								<String>VHATEConcepts.jbin</String>
-								<String>CHDREConcepts.jbin</String>
-								<String>VA-KP-ProblemList.jbin</String>
+								<!--String>CHDREConcepts.jbin</String>
+								<String>VA-KP-ProblemList.jbin</String-->
 								<String>ndfEConcepts.jbin</String>
-								<String>RRF-RXN.jbin</String>  <!-- RxNorm -->
-								<String>RRF-MR.jbin</String>  <!-- UMLS -->
-								<String>ucumEConcepts.jbin</String>
+								<!--String>RRF-RXN.jbin</String-->  <!-- RxNorm -->
+								<!--String>RRF-MR.jbin</String-->  <!-- UMLS -->
+								<!--String>ucumEConcepts.jbin</String-->
 							</conceptsFileNames>
 							<newConceptsFileNames>
 								<String>${project.build.directory}/filtered/NewConcepts.txt</String>
@@ -402,6 +453,26 @@
 										<description>US Extension Path</description>
 										<uuidStrings>
 											<String>520892e2-05e7-5e1f-bae8-5de5dbc89d04</String>
+										</uuidStrings>
+									</pathConcept>
+									<originConcept>
+										<description>SNOMED Core</description>
+										<uuidStrings>
+											<String>8c230474-9f11-30ce-9cad-185a96fd03a2</String>
+										</uuidStrings>
+									</originConcept>
+									<parentConcept>
+										<description>release</description>
+										<uuidStrings>
+											<String>88f89cc0-1d94-34a4-85ed-aa1949079314</String>
+										</uuidStrings>
+									</parentConcept>
+								</path>
+								<path>
+									<pathConcept>
+										<description>Spanish Extension Path</description>
+										<uuidStrings>
+											<String>7e3f727b-c338-5088-9cbb-8704df837d92</String>
 										</uuidStrings>
 									</pathConcept>
 									<originConcept>
@@ -452,7 +523,7 @@
 										</uuidStrings>
 									</originConcept>
 								</path>
-								<path>
+								<!--path>
 									<pathConcept>
 										<description>${projectDevelopmentOriginFsn}</description>
 										<uuidStrings>
@@ -465,7 +536,7 @@
 											<String>e8feddad-6010-5524-9d02-627821d81705</String>
 										</uuidStrings>
 									</originConcept>
-								</path>
+								</path-->
 								<path>
 									<pathConcept>
 										<description>${projectDevelopmentOriginFsn}</description>
@@ -480,7 +551,7 @@
 										</uuidStrings>
 									</originConcept>
 								</path>
-								<path>
+								<!--path>
 									<pathConcept>
 										<description>${projectDevelopmentOriginFsn}</description>
 										<uuidStrings>
@@ -563,7 +634,7 @@
 											<String>586ea679-073e-541f-ab10-bbcdaaade4e7</String>
 										</uuidStrings>
 									</originConcept>
-								</path>
+								</path-->
 							</initialPaths>
 						</configuration>
 					</execution>
