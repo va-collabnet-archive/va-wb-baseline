@@ -18,3 +18,4 @@ Organization (CHDR metadata)	Organization	01a081e7-0bec-5bbd-973a-53da06096ed1	$
 Department of Defense (CHDR metadata)	DoD	929e1267-afd1-4e5f-983d-e2286f807ebb	${projectDevelopmentPathFsn}	FALSE		769f447c-ff33-4e43-b123-4eade99331bd
 Department of Defense/Veterans Administration (CHDR metadata)	DoD/VA	929e1267-afd1-4e5f-983d-e2286f807ebb	${projectDevelopmentPathFsn}	FALSE		6c73195a-5041-45b9-9003-c055d59c7df1
 Veterans Administration (CHDR metadata)	VA	929e1267-afd1-4e5f-983d-e2286f807ebb	${projectDevelopmentPathFsn}	FALSE		798007ac-c8c8-488d-8761-e7357836f1f5
+Spanish Extension Path	Spanish Extension Path	e89c2b90-c85a-3dfb-978e-8df49046592b	${projectDevelopmentPathFsn}	FALSE		7e3f727b-c338-5088-9cbb-8704df837d9
