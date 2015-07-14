@@ -14,8 +14,8 @@ Joint Incentive Funds approved for publication workflow status	JIF approved for 
 Joint Incentive Funds for review workflow status	JIF for review	4af7ffa0-dadd-541b-bdb3-25cda4f89810	${projectDevelopmentPathFsn}	FALSE		b7bce84b-4596-5df4-9615-934232582479
 Project Refsets	Project Refsets	3e0cd740-2cc6-3d68-ace7-bad2eb2621da	${projectDevelopmentPathFsn}	FALSE		7fe3e31f-a969-53ff-8702-f7837e4a03d9
 SNOMED CT Refsets	SNOMED CT Refsets	7fe3e31f-a969-53ff-8702-f7837e4a03d9	${projectDevelopmentPathFsn}	FALSE		4b6b3b33-2fe2-506a-9f6a-7c7318b02fa9
+CHDR metadata	CHDR metadata	f4d2fabc-7e96-3b3a-a348-ae867ba74029	${projectDevelopmentPathFsn}	FALSE		01a081e7-0bec-5bbd-973a-53da06096ed1
 Organization (CHDR metadata)	Organization	01a081e7-0bec-5bbd-973a-53da06096ed1	${projectDevelopmentPathFsn}	FALSE		929e1267-afd1-4e5f-983d-e2286f807ebb
 Department of Defense (CHDR metadata)	DoD	929e1267-afd1-4e5f-983d-e2286f807ebb	${projectDevelopmentPathFsn}	FALSE		769f447c-ff33-4e43-b123-4eade99331bd
 Department of Defense/Veterans Administration (CHDR metadata)	DoD/VA	929e1267-afd1-4e5f-983d-e2286f807ebb	${projectDevelopmentPathFsn}	FALSE		6c73195a-5041-45b9-9003-c055d59c7df1
 Veterans Administration (CHDR metadata)	VA	929e1267-afd1-4e5f-983d-e2286f807ebb	${projectDevelopmentPathFsn}	FALSE		798007ac-c8c8-488d-8761-e7357836f1f5
-Spanish Extension Path	Spanish Extension Path	e89c2b90-c85a-3dfb-978e-8df49046592b	${projectDevelopmentPathFsn}	FALSE		7e3f727b-c338-5088-9cbb-8704df837d9
