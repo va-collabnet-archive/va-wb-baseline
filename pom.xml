@@ -178,7 +178,7 @@
 							<outputDirectory>${project.build.directory}/db</outputDirectory>
 						</configuration>
 					</execution>
-					<execution>
+					<!--execution>
 						<id>extract-spanish-extension</id>
 						<phase>generate-sources</phase>
 						<goals>
@@ -195,7 +195,7 @@
 							</artifactItems>
 							<outputDirectory>${project.build.directory}/db</outputDirectory>
 						</configuration>
-					</execution>
+					</execution-->
 					<!--execution>
 						<id>extract-medicalDevices</id>
 						<phase>generate-sources</phase>
@@ -376,6 +376,24 @@
 							<outputDirectory>${project.build.directory}/db</outputDirectory>
 						</configuration>
 					</execution-->
+					<execution>
+						<id>fetch-va-extension</id>
+						<phase>generate-sources</phase>
+						<goals>
+							<goal>unpack</goal>
+						</goals>
+						<configuration>
+							<artifactItems>
+								<artifactItem>
+									<groupId>gov.va.oia.terminology.converters</groupId>
+									<artifactId>va-extension-econcept</artifactId>
+									<version>3.4-prod-1.0-loader-1.0-SNAPSHOT</version>
+									<type>zip</type>
+								</artifactItem>
+							</artifactItems>
+							<outputDirectory>${project.build.directory}/db</outputDirectory>
+						</configuration>
+					</execution>
 				</executions>
 			</plugin>
 			<plugin>
@@ -417,7 +435,7 @@
 								<String>eConcepts.jbin</String> <!-- snomed -->
 								<String>../../JIF Hack.jbin</String>
 								<String>sct-us-extension.jbin</String>
-								<String>sct-spanish-extension.jbin</String>
+								<!--String>sct-spanish-extension.jbin</String-->
 								<!--String>medicalDevices.jbin</String-->
 								<!--String>ndfrtEConcepts.jbin</String-->
 								<String>loincEConcepts.jbin</String>
@@ -428,6 +446,7 @@
 								<!--String>RRF-RXN.jbin</String-->  <!-- RxNorm -->
 								<!--String>RRF-MR.jbin</String-->  <!-- UMLS -->
 								<!--String>ucumEConcepts.jbin</String-->
+								<String>sct-va-extension.jbin</String>
 							</conceptsFileNames>
 							<newConceptsFileNames>
 								<String>${project.build.directory}/filtered/NewConcepts.txt</String>
@@ -468,7 +487,7 @@
 										</uuidStrings>
 									</parentConcept>
 								</path>
-								<path>
+								<!--path>
 									<pathConcept>
 										<description>spanish language path</description>
 										<uuidStrings>
@@ -485,6 +504,26 @@
 										<description>release</description>
 										<uuidStrings>
 											<String>88f89cc0-1d94-34a4-85ed-aa1949079314</String>
+										</uuidStrings>
+									</parentConcept>
+								</path-->
+								<path>
+									<pathConcept>
+										<description>VHA Extension 2015-05-31</description>
+										<uuidStrings>
+											<String>69f78dfe-44e6-5fc5-ab47-c60cb33190a4</String>
+										</uuidStrings>
+									</pathConcept>
+									<originConcept>
+										<description>US Extension Path</description>
+										<uuidStrings>
+											<String>520892e2-05e7-5e1f-bae8-5de5dbc89d04</String>
+										</uuidStrings>
+									</originConcept>
+									<parentConcept>
+										<description>US Extension Path</description>
+										<uuidStrings>
+											<String>520892e2-05e7-5e1f-bae8-5de5dbc89d04</String>
 										</uuidStrings>
 									</parentConcept>
 								</path>
