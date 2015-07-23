@@ -14,11 +14,11 @@
 	<name>VA Terminology Workbench :: Baseline</name>
 	<description>VA Terminology Workbench :: development baseline :: database</description>
 
-	<!--scm>
-		<connection>scm:svn:https://csfe.aceworkspace.net/svn/repos/va-jif-wb-bundle/va-jif-wb-baseline/trunk</connection>
-		<developerConnection>scm:svn:https://csfe.aceworkspace.net/svn/repos/va-jif-wb-bundle/va-jif-wb-baseline/trunk</developerConnection>
-		<url>https://csfe.aceworkspace.net/integration/viewvc/viewvc.cgi/va-jif-wb-baseline/trunk/?root=va-jif-wb-bundle&amp;system=exsy1002</url>
-	</scm-->
+	<scm>
+		<connection>scm:svn:https://csfe.aceworkspace.net/svn/repos/va-wb-bundle-4/va-wb-baseline/trunk</connection>
+		<developerConnection>scm:svn:https://csfe.aceworkspace.net/svn/repos/va-wb-bundle-4/va-wb-baseline/trunk</developerConnection>
+		<url>https://csfe.aceworkspace.net/integration/viewvc/viewvc.cgi/va-wb-baseline-4/trunk/?root=va-wb-bundle&amp;system=exsy1002</url>
+	</scm>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
