@@ -17,7 +17,7 @@
 	<scm>
 		<connection>scm:svn:https://csfe.aceworkspace.net/svn/repos/va-wb-bundle-4/va-wb-baseline/trunk</connection>
 		<developerConnection>scm:svn:https://csfe.aceworkspace.net/svn/repos/va-wb-bundle-4/va-wb-baseline/trunk</developerConnection>
-		<url>https://csfe.aceworkspace.net/integration/viewvc/viewvc.cgi/va-wb-baseline-4/trunk/?root=va-wb-bundle&amp;system=exsy1002</url>
+		<url>https://csfe.aceworkspace.net/integration/viewvc/viewvc.cgi/va-wb-baseline-4/trunk/?root=va-wb-bundle-4&amp;system=exsy1002</url>
 	</scm>
 
 	<properties>
