@@ -24,7 +24,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<!-- per project customization -->
 		<projectName>VA Terminology Workbench</projectName>
-		<wb-toolkit.version>2.32-trek-no-jini-va-1.30-SNAPSHOT</wb-toolkit.version>
+		<wb-toolkit.version>2.32-trek-no-jini-va-1.30</wb-toolkit.version>
 
 		<!-- other standardized project properties -->
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -65,19 +65,19 @@
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-assembly-plugin</artifactId>
 				<version>2.5.5</version>
-                <!-- These dependencies get us multi-threaded zip - which is _way_ faster -->
-                <dependencies>  
-                    <dependency>
-                        <groupId>org.codehaus.plexus</groupId>
-                        <artifactId>plexus-archiver</artifactId>
-                        <version>2.10.3</version>
-                    </dependency>
-                    <dependency>
-                        <groupId>org.codehaus.plexus</groupId>
-                        <artifactId>plexus-io</artifactId>
-                        <version>2.6</version>
-                    </dependency>
-                </dependencies>
+				<!-- These dependencies get us multi-threaded zip - which is _way_ faster -->
+				<dependencies>  
+					<dependency>
+						<groupId>org.codehaus.plexus</groupId>
+						<artifactId>plexus-archiver</artifactId>
+						<version>2.10.3</version>
+					</dependency>
+					<dependency>
+						<groupId>org.codehaus.plexus</groupId>
+						<artifactId>plexus-io</artifactId>
+						<version>2.6</version>
+					</dependency>
+				</dependencies>
 				<executions>
 					<execution>
 						<id>attach-db</id>
@@ -171,7 +171,7 @@
 								<artifactItem>
 									<groupId>gov.va.oia.terminology.converters</groupId>
 									<artifactId>us-extension-econcept</artifactId>
-									<version>20150301-loader-1.2-SNAPSHOT</version>
+									<version>20150301-loader-1.2</version>
 									<type>zip</type>
 								</artifactItem>
 							</artifactItems>
@@ -243,7 +243,7 @@
 								<artifactItem>
 									<groupId>gov.va.oia.terminology.converters</groupId>
 									<artifactId>loinc-econcept</artifactId>
-									<version>2.52-loader-3.0-SNAPSHOT</version>
+									<version>2.52-loader-3.0</version>
 									<type>jbin.zip</type>
 								</artifactItem>
 							</artifactItems>
@@ -261,7 +261,7 @@
 								<artifactItem>
 									<groupId>gov.va.oia.terminology.converters</groupId>
 									<artifactId>vhat-econcept</artifactId>
-									<version>2015.06.22-loader-3.0-SNAPSHOT</version>
+									<version>2015.06.22-loader-3.0</version>
 									<type>zip</type>
 								</artifactItem>
 							</artifactItems>
@@ -315,7 +315,7 @@
 								<artifactItem>
 									<groupId>gov.va.oia.terminology.converters</groupId>
 									<artifactId>ndf-econcept</artifactId>
-									<version>2015-05-fixed-loader-2.0-SNAPSHOT</version>
+									<version>2015-05-fixed-loader-2.0</version>
 									<type>zip</type>
 								</artifactItem>
 							</artifactItems>
