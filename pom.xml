@@ -405,7 +405,7 @@
 								<artifactItem>
 									<groupId>gov.va.oia.terminology.converters</groupId>
 									<artifactId>pendingConcepts-econcept</artifactId>
-									<version>1.0.1-loader-1.0</version>
+									<version>1.0.1-loader-1.0.1</version>
 									<type>zip</type>
 								</artifactItem>
 							</artifactItems>
