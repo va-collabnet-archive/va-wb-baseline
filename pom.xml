@@ -387,7 +387,7 @@
 								<artifactItem>
 									<groupId>gov.va.oia.terminology.converters</groupId>
 									<artifactId>va-extension-econcept</artifactId>
-									<version>3.4-prod-1.0-loader-1.0-SNAPSHOT</version>
+									<version>3.4-prod-2.0-loader-1.0</version>
 									<type>zip</type>
 								</artifactItem>
 							</artifactItems>
