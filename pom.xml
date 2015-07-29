@@ -9,15 +9,15 @@
 
 	<groupId>gov.va.wb</groupId>
 	<artifactId>va-wb-baseline</artifactId>
-	<version>4.0-SNAPSHOT</version>
+	<version>4.0</version>
 	<packaging>pom</packaging>
 	<name>VA Terminology Workbench :: Baseline</name>
 	<description>VA Terminology Workbench :: development baseline :: database</description>
 
 	<scm>
-		<connection>scm:svn:https://csfe.aceworkspace.net/svn/repos/va-wb-bundle-4/va-wb-baseline/trunk</connection>
-		<developerConnection>scm:svn:https://csfe.aceworkspace.net/svn/repos/va-wb-bundle-4/va-wb-baseline/trunk</developerConnection>
-		<url>https://csfe.aceworkspace.net/integration/viewvc/viewvc.cgi/va-wb-baseline-4/trunk/?root=va-wb-bundle-4&amp;system=exsy1002</url>
+		<connection>scm:svn:https://csfe.aceworkspace.net/svn/repos/va-wb-bundle-4/va-wb-baseline/tags/4.0</connection>
+		<developerConnection>scm:svn:https://csfe.aceworkspace.net/svn/repos/va-wb-bundle-4/va-wb-baseline/tags/4.0</developerConnection>
+		<url>https://csfe.aceworkspace.net/integration/viewvc/viewvc.cgi/va-wb-baseline-4/tags/4.0?root=va-wb-bundle-4&amp;system=exsy1002</url>
 	</scm>
 
 	<properties>
