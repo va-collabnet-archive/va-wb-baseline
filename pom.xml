@@ -24,7 +24,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<!-- per project customization -->
 		<projectName>VA Terminology Workbench</projectName>
-		<wb-toolkit.version>2.32-trek-no-jini-va-1.30</wb-toolkit.version>
+		<wb-toolkit.version>2.32-trek-no-jini-va-1.32</wb-toolkit.version>
 
 		<!-- other standardized project properties -->
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -387,7 +387,7 @@
 								<artifactItem>
 									<groupId>gov.va.oia.terminology.converters</groupId>
 									<artifactId>va-extension-econcept</artifactId>
-									<version>3.4-prod-2.0-loader-1.0</version>
+									<version>3.4-prod-2.1-loader-1.0</version>
 									<type>zip</type>
 								</artifactItem>
 							</artifactItems>
@@ -405,7 +405,7 @@
 								<artifactItem>
 									<groupId>gov.va.oia.terminology.converters</groupId>
 									<artifactId>pendingConcepts-econcept</artifactId>
-									<version>1.0.1-loader-1.0.1</version>
+									<version>1.0.1-loader-1.1</version>
 									<type>zip</type>
 								</artifactItem>
 							</artifactItems>
