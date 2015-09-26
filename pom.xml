@@ -24,7 +24,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<!-- per project customization -->
 		<projectName>VA Terminology Workbench</projectName>
-		<wb-toolkit.version>2.32-trek-no-jini-va-1.32</wb-toolkit.version>
+		<wb-toolkit.version>2.32-trek-no-jini-va-1.33-SNAPSHOT</wb-toolkit.version>
 
 		<!-- other standardized project properties -->
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -387,7 +387,7 @@
 								<artifactItem>
 									<groupId>gov.va.oia.terminology.converters</groupId>
 									<artifactId>va-extension-econcept</artifactId>
-									<version>3.4-prod-2.1-loader-1.0</version>
+									<version>4.1-SNAPSHOT-2.0-loader-1.0</version>
 									<type>zip</type>
 								</artifactItem>
 							</artifactItems>
@@ -405,7 +405,7 @@
 								<artifactItem>
 									<groupId>gov.va.oia.terminology.converters</groupId>
 									<artifactId>pendingConcepts-econcept</artifactId>
-									<version>1.0.1-loader-1.1</version>
+									<version>1.0.1-loader-1.2-SNAPSHOT</version>
 									<type>zip</type>
 								</artifactItem>
 							</artifactItems>
@@ -528,9 +528,9 @@
 								</path-->
 								<path>
 									<pathConcept>
-										<description>VHA Extension 2015-05-31</description>
+										<description>VHA Extension</description>
 										<uuidStrings>
-											<String>69f78dfe-44e6-5fc5-ab47-c60cb33190a4</String>
+											<String>d0175e96-ef86-5c3f-a9ed-e14993b478e9</String>
 										</uuidStrings>
 									</pathConcept>
 									<originConcept>
