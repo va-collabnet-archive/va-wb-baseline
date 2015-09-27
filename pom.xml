@@ -24,7 +24,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<!-- per project customization -->
 		<projectName>VA Terminology Workbench</projectName>
-		<wb-toolkit.version>2.32-trek-no-jini-va-1.33-SNAPSHOT</wb-toolkit.version>
+		<wb-toolkit.version>2.32-trek-no-jini-va-1.33</wb-toolkit.version>
 
 		<!-- other standardized project properties -->
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
