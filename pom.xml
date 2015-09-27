@@ -152,7 +152,7 @@
 								<artifactItem>
 									<groupId>org.ihtsdo.sct.baseline</groupId>
 									<artifactId>sct-econcept</artifactId>
-									<version>2015.01.31-build-7</version>
+									<version>2015.07.31-build-3</version>
 									<classifier>latest</classifier>
 									<type>zip</type>
 								</artifactItem>
@@ -387,7 +387,7 @@
 								<artifactItem>
 									<groupId>gov.va.oia.terminology.converters</groupId>
 									<artifactId>va-extension-econcept</artifactId>
-									<version>4.1-SNAPSHOT-2.0-loader-1.0</version>
+									<version>4.0-prod-1.0-loader-1.0</version>
 									<type>zip</type>
 								</artifactItem>
 							</artifactItems>
@@ -405,7 +405,7 @@
 								<artifactItem>
 									<groupId>gov.va.oia.terminology.converters</groupId>
 									<artifactId>pendingConcepts-econcept</artifactId>
-									<version>1.0.1-loader-1.2-SNAPSHOT</version>
+									<version>1.0.1-loader-1.2</version>
 									<type>zip</type>
 								</artifactItem>
 							</artifactItems>
@@ -693,7 +693,7 @@
 										</uuidStrings>
 									</originConcept>
 								</path-->
-								<path>
+								<!--path>
 									<pathConcept>
 										<description>${projectDevelopmentOriginFsn}</description>
 										<uuidStrings>
@@ -706,7 +706,7 @@
 											<String>1f926b58-84ab-52f1-9ce0-c4e20880dafe</String>
 										</uuidStrings>
 									</originConcept>
-								</path>
+								</path-->
 							</initialPaths>
 						</configuration>
 					</execution>
